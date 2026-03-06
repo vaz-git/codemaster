@@ -39,3 +39,23 @@ function activeLink() {
 
 // A diciona um evento de clique a cada link de navegação
 navLinks.forEach(item => item.addEventlistener('click', activeLink));
+
+// ====================== ALTERNAR MODO ESCURO/CLARO ================
+// Função para alternar entre os temas claro e escuro
+function toggleMode () {
+    const html = document.documentElement;
+    html.classList.toggle('light'); // Alterna a classe "light" mo elemento HTML
+
+    // Salva o tema escolhido no localStorage
+    const mode = html.classList.contains('light') ? 'light' : 'dark';
+    localStorage.setItem('theme', mode);
+
+    // Atualiza a cor do texto do título 
+    updateTextcolor();
+}  
+
+// Carrega o tema salvo no localStorage ao carregar a página
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    document.documentElement.classList.toggle('light', savedTheme === 'light');
+}
