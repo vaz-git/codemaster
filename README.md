@@ -4,7 +4,7 @@
 Recebi o HTML e CSS prontos. O layout renderiza perfeitamente, mas
 o menu mobile não abre e o formulário recarrega a página...
 
-Lista de tarefas
+## Lista de tarefas
 1. Gerenciar a abertura e fechamento do menu móvel (ícone hambúrguer) 
 
 2. Implementar o destaque visual para o item de navegação selecionado
